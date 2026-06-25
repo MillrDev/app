@@ -16,7 +16,9 @@ export default {
 
 <template>
   <main>
-    <h1>Welcome</h1>
-    <RouterLink to="/pump-rock">Go to Pump Rock</RouterLink>
+    <h1>Apps</h1>
+    <button>
+      <RouterLink to="/pump-rock">Pump Rock</RouterLink>
+    </button>
   </main>
 </template>
