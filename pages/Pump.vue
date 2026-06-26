@@ -38,7 +38,7 @@ export default {
   <header>
     <div>
       <h1>Welcome to {{ app_name }}</h1>
-      <h2 style="font-style: italic" ;>Who can rock the most pumps?</h2>
+      <h2 style="font-style: italic">Who can rock the most pumps?</h2>
     </div>
     <section>
       <h3>Username: {{ username || "Not set" }}</h3>
@@ -54,7 +54,7 @@ export default {
     <button @click="addPump">Add pump to {{ username }}</button>
   </section>
   <article>
-    <h2 style="font-weight: bold" ;>Pump Leaderboard</h2>
+    <h2 style="font-weight: bold">Pump Leaderboard</h2>
     <ul>
       <li v-for="pump in pumps" :key="pump.id">
         {{ pump.username }} has had a pump at
