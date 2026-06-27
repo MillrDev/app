@@ -55,7 +55,7 @@ export default {
 
       this.pumps = data.map((pump) => ({
         ...pump,
-        timestamp: pump.timestamp,
+        timestamp: new Date(pump.timestamp),
       }));
     },
   },
@@ -105,7 +105,7 @@ export default {
     <ul>
       <li v-for="pump in pumps" :key="pump.id">
         {{ pump.username }} has had a pump at
-        {{ pump.timestamp.toLocaleString() }}
+        {{ new Date(pump.timestamp).toLocaleString() }}
       </li>
     </ul>
   </article>
