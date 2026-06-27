@@ -46,6 +46,8 @@ export default {
         username: this.username,
         timestamp: new Date(),
       });
+
+      this.loadTopPumps();
     },
 
     async setUsername(value) {
@@ -134,8 +136,16 @@ export default {
       <h2 style="font-weight: bold">Top 10 Pump-Rockers</h2>
       <ul>
         <li v-for="(pumpRocker, index) in topPumps" :key="pumpRocker.username">
-          #{{ index + 1 }}. {{ pumpRocker.username }} with
-          {{ pumpRocker.count }} pumps
+          {{
+            index === 0
+              ? "🥇"
+              : index === 1
+                ? "🥈"
+                : index === 2
+                  ? "🥉"
+                  : "#" + (index + 1) + "."
+          }}
+          {{ pumpRocker.username }} with {{ pumpRocker.count }} pumps
         </li>
       </ul>
     </section>
